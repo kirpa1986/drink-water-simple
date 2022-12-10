@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --border-color: rgb(34, 99, 104);
+    --fill-color: rgb(123, 182, 221);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(77, 181, 189);
+    color: #fff;
+    overflow: hidden;
+}
+
+h1, h3 {
+    margin-bottom: 0.8rem;
+}
+h3 {
+    font-weight: 400;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+}
+
+.cup {
+    background: #fff;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 25vh;
+    border-radius: 0 0 2rem 2rem;
+    overflow: hidden;
+}
+
+.cup .remained {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cup .remained span {
+    font-size: 0.8rem;
+}
+
+#liters {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.cup .percentage {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: var(--fill-color);
+    font-weight: 800;
+}
+
+
+.text {
+    margin: 1rem 0;
+}
+
+.cups {
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cups .cup {
+    width: 20%;
+    height: 15vh;
+    border-radius: 0 0 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255, 0.8);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cups .cup.full {
+    background: var(--fill-color);
+    color: #fff;
+    font-weight: 800;
+}
+
+@media (max-height: 400px) {
+    .container {
+        max-width: 100%;
+    }
+    .cup {
+        width: 30%;
+        min-width: 70px;
+    }
+    .cups {
+        width: 100%;
+    }
+    .cups .cup {
+        width: 10%;
+        height: 15vh;
+    }
+}
